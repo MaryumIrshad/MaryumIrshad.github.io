@@ -323,7 +323,7 @@ h1 em,h2 em{color:var(--accent)}
 .about-kicker span{font:500 .63rem var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
 .about-introduction{display:flex;align-items:center;gap:22px;margin-bottom:55px}
 .about-introduction .about-kicker{margin:0}
-.pronunciation{margin:0;padding-left:22px;border-left:1px solid var(--line);font:.58rem var(--mono);letter-spacing:.035em;color:var(--muted)}
+.pronunciation{margin:0;padding-left:22px;border-left:1px solid var(--line);font:.72rem var(--mono);letter-spacing:.035em;color:var(--muted)}
 .pronunciation>span:first-child{color:var(--accent);font-weight:500;margin-right:7px}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .skill-category{font-size:.72rem;line-height:1.35;letter-spacing:.065em;padding-left:19px}
