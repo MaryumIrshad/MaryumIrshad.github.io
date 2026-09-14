@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Maryum Irshad is a computational biochemist studying protein dynamics, molecular simulations, and machine learning.">
+  <title>Maryum Irshad — Computational Biochemist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Maryum Irshad, home">MId<span>.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div id="nav-links" class="nav-links">
+        <a href="#about">About</a><a href="#toolkit">Skills</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#publications">Papers</a><a href="#experience">Experience</a><a href="beyond.html">Beyond</a>
+      </div>
+      <a class="nav-contact" href="mailto:irshadmm@mail.uc.edu">Let's talk ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> AI · Machine learning · Molecular simulation</p>
+        <h1>I build models<br><em>for molecular worlds.</em></h1>
+        <p class="hero-intro">I develop machine-learning models and molecular simulation workflows that turn complex biomolecular data into useful predictions for molecular interactions, drug discovery, and chemical safety.</p>
+        <div class="hero-actions"><a class="button primary" href="#research">Explore my research <span>↓</span></a><a class="button text" href="Irshad_Maryum_Phd.pdf" target="_blank">View CV ↗</a></div>
+      </div>
+      <div class="molecule katanin-viewer" aria-label="Interactive three-dimensional view of a Katanin hexamer with ATP. Move the pointer or drag to rotate; scroll to zoom." tabindex="0">
+        <div class="katanin-halo" aria-hidden="true"></div>
+        <div id="katanin-3d" class="katanin-canvas" aria-hidden="true"></div>
+        <p class="katanin-loading" aria-live="polite">Building Katanin structure…</p>
+        <button class="katanin-reset" type="button" aria-label="Reset Katanin view">Reset view</button>
+        <p class="rotate-hint"><span>Move to rotate</span><span>Drag · scroll to explore</span></p>
+      </div>
+      <div class="scroll-cue"><span>Scroll to explore</span><i></i></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-introduction"><p class="about-kicker"><span>Hello</span> — I’m Maryum.</p><p class="pronunciation"><span aria-hidden="true">/ mur-yum /</span><span class="sr-only">Pronounced mur-yum.</span> “mur” as in murmur · “yum” as in yummy</p></div>
+      <div class="section-content split">
+        <h2>Intelligence inspired<br><em>by molecular structure.</em></h2>
+        <div class="prose"><p>My work connects artificial intelligence with the physical detail of molecular science. I build graph neural networks, ensemble models, and data pipelines—and use molecular dynamics when the question calls for atomistic resolution.</p><p>At the University of Cincinnati, I work across protein interactions, drug-discovery benchmarks, chemical safety, and simulation analysis. The common thread is turning complex molecular data into useful, interpretable predictions.</p><div class="stat-row"><div><strong>AI</strong><span>Graph & ensemble learning</span></div><div><strong>MD</strong><span>Atomistic simulation</span></div><div><strong>Py</strong><span>Scientific workflows</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="toolkit" class="section skills-section">
+      <div class="section-heading"><h2>Methods &<br><em>tools.</em></h2><p>The technical toolkit I use to move from molecular data to reproducible models and mechanistic insight.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card primary-skill"><p class="skill-category">Machine learning & AI</p><h3>Predictive and geometric modeling</h3><p>Graph neural networks · Message-passing neural networks · Ensemble learning · Regression · Model calibration · Explainable AI · SHAP · PCA</p><div class="skill-tech">PyTorch · PyTorch Geometric · Chemprop · scikit-learn · XGBoost · LightGBM</div></article>
+        <article class="skill-card"><p class="skill-category">Molecular simulation</p><h3>Atomistic structure and dynamics</h3><p>Molecular dynamics · Protein–protein interactions · Protein–ligand interactions · Binding-energy analysis · Allosteric network analysis</p><div class="skill-tech">GROMACS · VMD · PyMOL · ChimeraX · MDAnalysis</div></article>
+        <article class="skill-card"><p class="skill-category">Cheminformatics</p><h3>Molecular data and safety</h3><p>Molecular fingerprints · Structural similarity · Matched molecular pairs · Read Across · Molecular descriptors · Analogue selection</p><div class="skill-tech">RDKit · Pipeline Pilot · mmpdb · Pandas</div></article>
+        <article class="skill-card"><p class="skill-category">Scientific computing</p><h3>Reproducible computational workflows</h3><p>Data processing · Workflow automation · Structural bioinformatics · Statistical analysis · Scientific visualization · GPU computing</p><div class="skill-tech">Python · Biopython · NumPy · Linux · Git · HPC</div></article>
+      </div>
+    </section>
+
+    <section id="research" class="section research">
+      <div class="section-heading"><h2>Learning from structure,<br><em>dynamics, and data.</em></h2><p>Research spanning predictive AI and physics-based molecular modeling.</p></div>
+      <div class="research-list">
+        <article><div><p class="tag">Geometric deep learning</p><h3>AI for biomolecular interactions</h3></div><p>Designing graph-based models that learn from 3D protein interfaces to predict binding energetics for folded and intrinsically disordered complexes.</p></article>
+        <article><div><p class="tag">Molecular AI</p><h3>Predictive models for drug discovery</h3></div><p>Combining message-passing neural networks, molecular fingerprints, classical ML, ensembling, and calibration for affinity and ADMET prediction.</p></article>
+        <article><div><p class="tag">Molecular simulation</p><h3>Mechanisms from atomistic motion</h3></div><p>Using MD, network analysis, cross-correlation, RMSF, and PCA to study allostery in Katanin and MAP7–microtubule interactions.</p></article>
+        <article><div><p class="tag">Cheminformatics · Human safety</p><h3>Automated analogue selection</h3></div><p>Building reproducible read-across workflows using structural similarity, matched molecular pairs, RDKit, Pandas, and Pipeline Pilot.</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-heading"><h2>Models, pipelines,<br><em>and working code.</em></h2><p>A selection of practical projects where molecular science meets machine learning.</p></div>
+      <div class="project-grid">
+        <a class="project-card featured" href="https://github.com/DimaUClab/FlexENN" target="_blank" rel="noreferrer">
+          <div class="project-top"><span class="project-type">Geometric deep learning · Featured</span><span class="project-arrow">↗</span></div>
+          <h3>FlexENN</h3>
+          <p>An interface-focused geometric graph neural network that predicts experimental binding free energies from the 3D structures of globular and intrinsically disordered protein complexes.</p>
+          <ul><li>PyTorch</li><li>GNN</li><li>3D structure</li><li>Binding ΔG</li></ul>
+        </a>
+        <a class="project-card" href="https://github.com/MaryumIrshad/pxr-challenge" target="_blank" rel="noreferrer">
+          <div class="project-top"><span class="project-type">Molecular AI</span><span class="project-arrow">↗</span></div>
+          <h3>OpenADMET PXR Challenge</h3>
+          <p>A reproducible activity-prediction workflow combining Chemprop message-passing neural networks with classical ML, greedy ensemble selection, robust calibration, and similarity-aware correction.</p>
+          <ul><li>Chemprop</li><li>RDKit</li><li>Ensemble ML</li><li>ADMET</li></ul>
+        </a>
+        <a class="project-card" href="https://github.com/MaryumIrshad/protein-ligand-affinity-ml" target="_blank" rel="noreferrer">
+          <div class="project-top"><span class="project-type">Cheminformatics · Regression</span><span class="project-arrow">↗</span></div>
+          <h3>Protein–Ligand Affinity ML</h3>
+          <p>A comparative ML pipeline using Morgan fingerprints to benchmark linear, kernel, tree, and boosting models on protein–ligand binding-affinity data.</p>
+          <ul><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>PDBbind+</li></ul>
+        </a>
+        <a class="project-card" href="https://github.com/MaryumIrshad/protein-property-calculator" target="_blank" rel="noreferrer">
+          <div class="project-top"><span class="project-type">Scientific software</span><span class="project-arrow">↗</span></div>
+          <h3>Protein Property Calculator</h3>
+          <p>A Python workflow that fetches protein sequences, computes physicochemical properties, exports analysis-ready tables, and creates comparative visualizations.</p>
+          <ul><li>Python</li><li>Biopython</li><li>UniProt</li><li>Visualization</li></ul>
+        </a>
+      </div>
+      <a class="all-projects" href="https://github.com/MaryumIrshad" target="_blank" rel="noreferrer">Explore all repositories on GitHub <span>↗</span></a>
+    </section>
+
+    <section id="publications" class="section publications">
+      <div class="section-heading"><h2>Ideas tested,<br><em>shared, and evolving.</em></h2><p>Publications and presentations across molecular simulation, machine learning, and catalysis.</p></div>
+      <div class="publication-list">
+        <a class="paper-entry" href="https://doi.org/10.64898/2026.05.15.725440" target="_blank" rel="noreferrer"><span class="pub-year">2026</span><div><div class="paper-meta"><span class="pill">bioRxiv</span></div><h3>FlexENN: A Graph Neural Network for Binding Energy Prediction of Globular and Intrinsically Disordered Proteins</h3><p><strong class="author-me">Irshad, M.</strong>, Ori, M. K., Dima, R. I.</p></div></a>
+        <a class="paper-entry" href="https://www.biorxiv.org/content/10.64898/2026.08.01.742241v1" target="_blank" rel="noreferrer"><span class="pub-year">2026</span><div><div class="paper-meta"><span class="pill">The Journal of Chemical Physics</span></div><h3>Probing Mechanisms of Allosteric Regulation in AAA+ ATPases for Microtubule Severing and Protein Disaggregation</h3><p><strong class="author-me">Irshad, M.</strong>, Walpalage, K., Zhaocheng, Z., Gillen, M., George, S., Dima, R. I.</p></div></a>
+        <article class="paper-entry"><span class="pub-year">Ongoing</span><div><div class="paper-meta"><span class="pill">Manuscript in progress</span></div><h3>The Differential Effects of MAP7 and Tau on Microtubule Dynamics and Stability</h3><p>Stump, E., <strong class="author-me">Irshad, M.</strong>, Dima, R. I.</p></div></article>
+        <a class="paper-entry" href="https://doi.org/10.47836/pjst.33.2.21" target="_blank" rel="noreferrer"><span class="pub-year">2025</span><div><div class="paper-meta"><span class="pill">Pertanika Journal of Science & Technology</span></div><h3>Hydrogenolysis of Glycerol to Propanediols over Ni Supported on MgO Catalyst</h3><p>Shakur, M., <strong class="author-me">Irshad, M.</strong>, Haider, M. S.</p></div></a>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="section-heading experience-heading"><h2>Across the lab,<br><em>classroom, and industry.</em></h2><p>A career shaped by scientific questions, technical teams, and real-world systems.</p></div>
+      <div class="experience-grid experience-only">
+        <div class="timeline">
+          <article tabindex="0"><time>2025 — Present</time><div><span class="role-kind">Applied research</span><h3>Graduate Research Assistant · Human Safety</h3><p>Procter & Gamble at UC Digital Accelerator</p></div><p class="role-details">Developing automated structure-based analogue selection and Read Across workflows using matched molecular pairs, RDKit, Pandas, and Pipeline Pilot.</p></article>
+          <article tabindex="0"><time>2022 — Present</time><div><span class="role-kind">Doctoral research</span><h3>Graduate Researcher</h3><p>University of Cincinnati · Computational Biochemistry</p></div><p class="role-details">Building FlexENN and studying Katanin allostery and MAP7–microtubule dynamics through machine learning, molecular simulation, and structural bioinformatics.</p></article>
+          <article tabindex="0"><time>2022 — 2025</time><div><span class="role-kind">Teaching</span><h3>Graduate Teaching Assistant</h3><p>University of Cincinnati · Chemistry</p></div><p class="role-details">Taught Organic Chemistry I and General Chemistry I and II through laboratory instruction and recitation sections.</p></article>
+          <article tabindex="0"><time>2019 — 2022</time><div><span class="role-kind">Academic research</span><h3>Research Assistant · HEC-NRPU</h3><p>University of Engineering and Technology, Lahore</p></div><p class="role-details">Synthesized and characterized supported metal catalysts using XRD, BET, and FTIR, then evaluated glycerol conversion by gas chromatography.</p></article>
+          <article tabindex="0"><time>2015 — 2018</time><div><span class="role-kind">Industry</span><h3>Production Engineer</h3><p>Fauji Fertilizer Company · Ammonia Unit</p></div><p class="role-details">Led an eight-person operations team through safe plant operation, emergency response, turnarounds, maintenance, and shutdown/start-up procedures.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">Open to ideas, collaborations, and opportunities</p>
+      <h2>Let’s study what<br><em>moves beneath.</em></h2>
+      <a class="email-link" href="mailto:irshadmm@mail.uc.edu">irshadmm@mail.uc.edu <span>↗</span></a>
+      <div class="contact-links"><a href="https://github.com/maryumirshad" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/maryum-irshad-ch" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="Irshad_Maryum_Phd.pdf" target="_blank">Curriculum vitae ↗</a></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Maryum Irshad</span><span>Computational biochemist · Cincinnati, OH</span><a href="#home">Back to top ↑</a></footer>
+  <script src="katanin_web/3Dmol-min.js"></script>
+  <script src="katanin_web/structure.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

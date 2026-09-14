@@ -1,0 +1,4 @@
+# Generated molecular animation renders are not used by the website.
+katanin_web/*
+!katanin_web/3Dmol-min.js
+!katanin_web/structure.js
