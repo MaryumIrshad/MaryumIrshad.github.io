@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   const menuButton = document.querySelector(".menu-toggle");
-  const revealItems = document.querySelectorAll(".section-label, .section-heading, .split > *, .skill-card, .research-list article, .project-card, .all-projects, .timeline article, .contact > *");
+  const revealItems = document.querySelectorAll(".section-label, .section-heading, .split > *, .skill-card, .research-list article, .project-card, .all-projects, .figure-card, .timeline article, .contact > *");
 
   document.body.classList.add("loaded");
   const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 24);
@@ -115,4 +115,41 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (loadingMessage) {
     loadingMessage.textContent = "Interactive structure unavailable";
   }
+
+  const figureCards = document.querySelectorAll(".figure-card[data-fullscreen-src]");
+  const figureLightbox = document.querySelector(".figure-lightbox");
+  const lightboxContent = figureLightbox?.querySelector(".lightbox-content");
+  const lightboxClose = figureLightbox?.querySelector(".lightbox-close");
+
+  const openFigure = card => {
+    if (!figureLightbox || !lightboxContent) return;
+    const source = card.dataset.fullscreenSrc;
+    const isPdf = card.dataset.fullscreenType === "pdf";
+    const media = document.createElement(isPdf ? "iframe" : "img");
+    if (isPdf) {
+      media.src = source;
+      media.title = card.getAttribute("aria-label") || "Expanded figure";
+    } else {
+      media.src = source;
+      media.alt = card.querySelector("img")?.alt || "Expanded scientific figure";
+    }
+    lightboxContent.replaceChildren(media);
+    figureLightbox.showModal();
+    lightboxClose?.focus();
+  };
+
+  figureCards.forEach(card => {
+    card.addEventListener("click", () => openFigure(card));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openFigure(card);
+      }
+    });
+  });
+  lightboxClose?.addEventListener("click", () => figureLightbox.close());
+  figureLightbox?.addEventListener("click", event => {
+    if (event.target === figureLightbox) figureLightbox.close();
+  });
+  figureLightbox?.addEventListener("close", () => lightboxContent?.replaceChildren());
 });
